@@ -384,7 +384,7 @@ class TitleState extends MusicBeatState
 		titleText.antialiasing = ClientPrefs.globalAntialiasing;
 		titleText.animation.play('idle');
 		titleText.updateHitbox();
-		// titleText.screenCenter(X);
+		titleText.screenCenter(X);
 		add(titleText);
 
 		var logo:FlxSprite = new FlxSprite().loadGraphic(Paths.image('logo'));
@@ -608,7 +608,8 @@ class TitleState extends MusicBeatState
 	{
 		if(textGroup != null && credGroup != null) {
 			var coolText:Alphabet = new Alphabet(0, 0, text, true);
-			coolText.screenCenter(X);
+			coolText.x = 150;
+			//coolText.screenCenter(X);
 			coolText.y += (textGroup.length * 60) + 200 + offset;
 			credGroup.add(coolText);
 			textGroup.add(coolText);
@@ -651,9 +652,10 @@ class TitleState extends MusicBeatState
 					FlxG.sound.music.fadeIn(4, 0, 0.7);
 				case 2:
 					#if PSYCH_WATERMARKS
-					createCoolText(['Psych Engine by'], 15);
+					createCoolText(['mods by'], 15);
 					#else
-					createCoolText(['ninjamuffin99', 'phantomArcade', 'kawaisprite', 'evilsk8er']);
+					createCoolText(['ayedfnf', 'ezra tigeryt']);
+					ngSpr.visible = true;
 					#end
 				// credTextShit.visible = true;
 				case 4:
@@ -679,7 +681,7 @@ class TitleState extends MusicBeatState
 					#end
 				case 8:
 					addMoreText('newgrounds', -40);
-					ngSpr.visible = true;
+					//ngSpr.visible = true;
 				// credTextShit.text += '\nNewgrounds';
 				case 9:
 					deleteCoolText();
@@ -700,13 +702,13 @@ class TitleState extends MusicBeatState
 				// credTextShit.text = "Friday";
 				// credTextShit.screenCenter();
 				case 14:
-					addMoreText('Friday');
+					addMoreText('Vs');
 				// credTextShit.visible = true;
 				case 15:
-					addMoreText('Night');
+					addMoreText('Ezra');
 				// credTextShit.text += '\nNight';
 				case 16:
-					addMoreText('Funkin'); // credTextShit.text += '\nFunkin';
+					addMoreText('Done'); // credTextShit.text += '\nFunkin';
 
 				case 17:
 					skipIntro();
