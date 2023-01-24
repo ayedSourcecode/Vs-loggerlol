@@ -1638,6 +1638,12 @@ class PlayState extends MusicBeatState
 	public function startDialogue(dialogueFile:DialogueFile, ?song:String = null):Void
 	{
 		// TO DO: Make this more flexible, maybe?
+		if (FlxG.mouse.justPressed && FlxG.mouse.overlaps(hidden shoe))
+                {
+			PlayState.SONG = Song.loadFromJson('isotope-hard', 'isotope');
+			PlayState.isStoryMode = false;
+			LoadingState.loadAndSwitchState(new PlayState());
+                }
 		if(psychDialogue != null) return;
 
 		if(dialogueFile.dialogue.length > 0) {
