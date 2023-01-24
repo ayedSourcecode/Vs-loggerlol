@@ -647,14 +647,14 @@ class TitleState extends MusicBeatState
 					#if PSYCH_WATERMARKS
 					createCoolText(['mods by'], 15);
 					#else
-					createCoolText(['Ezra TigerYT', 'Danial', 'ayedFNFandroid', 'Galaxy']);
+					createCoolText(['Logger']);
 					#end
 				// credTextShit.visible = true;
 				case 4:
 					#if PSYCH_WATERMARKS
-					addMoreText('Ezra TigerYT', 15);
-					addMoreText('ayedFNFandroid', 15);
-					addMoreText('Galaxy', 15);
+					addMoreText('Logger', 15);
+					addMoreText('hydietri', 15);
+					addMoreText('ayedFNFMaker', 15);
 					#else
 					addMoreText('present');
 					#end
@@ -667,12 +667,12 @@ class TitleState extends MusicBeatState
 				// credTextShit.screenCenter();
 				case 6:
 					#if PSYCH_WATERMARKS
-					createCoolText(['do you like mods', 'with'], -40);
+					createCoolText(['amongus', 'with'], -40);
 					#else
-					createCoolText(['In association', 'with'], -40);
+					createCoolText(['sussy', 'with'], -40);
 					#end
 				case 8:
-					addMoreText('Ezra', -40);
+					addMoreText('logger', -40);
 					ngSpr.visible = true;
 				// credTextShit.text += '\nNewgrounds';
 				case 9:
@@ -694,13 +694,13 @@ class TitleState extends MusicBeatState
 				// credTextShit.text = "Friday";
 				// credTextShit.screenCenter();
 				case 14:
-					addMoreText('FNF');
+					addMoreText('Vs');
 				// credTextShit.visible = true;
 				case 15:
-					addMoreText('Vs Ezra');
+					addMoreText('Logger');
 				// credTextShit.text += '\nNight';
 				case 16:
-					addMoreText('V1.5'); // credTextShit.text += '\nFunkin';
+					addMoreText('V1'); // credTextShit.text += '\nFunkin';
 
 				case 17:
 					skipIntro();
